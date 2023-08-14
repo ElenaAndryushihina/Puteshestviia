@@ -1,111 +1,76 @@
-.custom-input,
-.custom-textarea {
+.custom-input {
   position: relative;
+  width: 100%;
 
-  display: flex;
-  width: 530px;
-  padding: 14px 0 28px;
-
-  @media screen and (max-width: 767px) {
-    padding: 4px 0 48px;
+  input {
+    min-height: 64px;
+    padding: 22px 30px;
     width: 100%;
-  }
+    border: none;
+    outline: none;
 
-  label {
-    display: flex;
-    align-items: center;
-    width: 100%;
-
-    @media screen and (max-width: 767px) {
-      align-items: flex-start;
-      flex-direction: column;
+    &::placeholder {
+      color: rgba($elephant, 0.5);
+      font-family: inherit;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 16px;
     }
 
-    input,
-    textarea {
-      flex-grow: 1;
-      max-width: 300px;
-      min-height: 48px;
-      margin-left: auto;
-      padding: 10px;
-
-      border: 2px solid rgba(#000000, 0.2);
-      border-radius: 5px;
-      outline: none;
-
-      transition: border 0.3s ease;
-
-      @media screen and (max-width: 767px) {
-        max-width: unset;
-        width: 100%;
-      }
-
-      &:hover {
-        border: 2px solid rgba(#000000, 0.5);
-      }
-
-      &:focus {
-        border: 2px solid rgba(#000000, 0.8);
-      }
+    &:hover {
+      outline: 1px solid $navy-blue;
     }
-  }
 
-  &__label {
-    @media screen and (max-width: 767px) {
-      margin: 0 0 18px 0;
+    &:hover::placeholder {
+      color: rgba($navy-blue, 1);
     }
-  }
 
-  &__error {
-    position: absolute;
-    right: 0;
-    bottom: 35px;
+    &:active,
+    &:focus {
+      outline: 1px solid #1c3374;
+    }
 
-    color: #ff1553;
-
-    opacity: 0;
-
-    transition: opacity 0.3s ease;
-
-    @media screen and (max-width: 767px) {
-      bottom: 20px;
+    &:active::placeholder,
+    &:focus::placeholder,
+    &:disabled::placeholder {
+      color: $color-transparent;
     }
   }
 
   &.is-invalid {
-    input,
-    textarea {
-      border: 2px solid #ff1553;
+    input {
+      outline: 2px solid $color-error;
 
       &:focus,
       &:hover {
-        border: 2px solid rgba(#ff1553, 0.5);
+        outline: 2px solid rgba($color-error, 0.5);
       }
     }
   }
 
   &.is-valid {
     input {
-      border: 2px solid #22b259;
+      outline: 2px solid $color-success;
 
       &:focus,
       &:hover {
-        border: 2px solid rgba(#22b259, 0.5);
+        outline: 2px solid rgba($color-success, 0.5);
       }
     }
   }
 
   .input-message {
     position: absolute;
-    right: 0;
-    bottom: -5px;
+    top: 0;
+    left: 0;
 
     &.is-invalid {
-      color: #ff0000;
+      color: $color-error;
     }
 
     &.is-valid {
-      color: #15ab07;
+      color: $color-success;
     }
   }
 }

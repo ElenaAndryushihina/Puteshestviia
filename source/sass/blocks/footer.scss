@@ -1,0 +1,153 @@
+.footer__wrapper {
+  padding: 53px 0 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+
+  @include vp-767 {
+    justify-content: start;
+  }
+}
+
+.footer__nav.main-nav {
+  @include vp-1199 {
+    grid-template-columns: 118px auto;
+    column-gap: auto;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+  }
+}
+
+.footer__nav .main-nav__list {
+  @include vp-1199 {
+    gap: 20px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    grid-template-columns: repeat(2, 48%);
+    justify-content: start;
+  }
+}
+
+.main-nav__item--tours {
+  @include vp-767 {
+    order: -5;
+  }
+}
+
+.main-nav__item--training {
+  @include vp-767 {
+    order: -3;
+  }
+}
+
+.main-nav__item--about {
+  @include vp-767 {
+    order: -1;
+  }
+}
+
+.main-nav__item--reviews {
+  @include vp-767 {
+    order: -4;
+  }
+}
+
+.main-nav__item--photos {
+  @include vp-767 {
+    order: -2;
+  }
+}
+
+.main-nav__item--contacts {
+  @include vp-767 {
+    order: -1;
+  }
+}
+
+.footer__nav .main-nav__phone {
+  @include vp-1199 {
+    display: none;
+  }
+}
+
+.footer__nav .main-nav__logo img {
+  @include vp-1199 {
+    width: 118px;
+    height: 34px;
+  }
+
+  @include vp-767 {
+    width: 112px;
+    height: 34px;
+  }
+}
+
+.footer__nav a {
+  @include vp-1199 {
+    font-family: inherit;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+  }
+}
+
+.footer__social ul {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 15px;
+  justify-content: center;
+
+  @include vp-767 {
+    justify-content: start;
+  }
+}
+
+.footer__social li {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(45, 56, 63, 0.3);
+}
+
+.footer__social a {
+  display: block;
+  width: 30px;
+  padding: 15px;
+}
+
+.footer__social svg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto auto;
+}
+
+.footer__copyright {
+  margin: 0 auto;
+
+  @include vp-767 {
+    margin: 0;
+    justify-content: start;
+  }
+}
+
+.footer__copyright a {
+  font-family: inherit;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 100%;
+}

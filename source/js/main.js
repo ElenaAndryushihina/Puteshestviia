@@ -1,6 +1,15 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
+import {openMenu} from './utils/menu';
+import {toPlayVideo} from './utils/play-video';
+import {toPlayAudio} from './utils/play-audio';
+import {initHeroSwiper} from './modules/sliders/init-slider-hero';
+import {initToursSwiper} from './modules/sliders/init-slider-tours';
+import {initGallerySwiper} from './modules/sliders/init-slider-gallery';
+import {initAdvantagesSwiper} from './modules/sliders/init-slider-advantages';
+import {initReviewsSwiper} from './modules/sliders/init-slider-reviews';
+import {initTrainingSwiper} from './modules/sliders/init-slider-training';
 
 // ---------------------------------
 
@@ -10,6 +19,9 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   iosVhFix();
+  toPlayVideo();
+  toPlayAudio();
+  openMenu();
 
   // Modules
   // ---------------------------------
@@ -18,6 +30,12 @@ window.addEventListener('DOMContentLoaded', () => {
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     initModals();
+    initHeroSwiper();
+    initToursSwiper();
+    initGallerySwiper();
+    initAdvantagesSwiper();
+    initReviewsSwiper();
+    initTrainingSwiper();
     const form = new Form();
     window.form = form;
     form.init();

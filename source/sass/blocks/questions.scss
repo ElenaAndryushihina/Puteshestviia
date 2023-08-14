@@ -1,0 +1,46 @@
+.questions__wrapper {
+  width: 81.5%;
+  margin: 0 auto;
+  padding: 308px 0 307px;
+  display: flex;
+  flex-direction: column;
+}
+
+.questions__form {
+  width: 100%;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.questions__form form {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 34.77% 34.77% 24.34%;
+  gap: 20px 3.06%;
+}
+
+.questions__form h3 {
+  display: block;
+  margin: 0 auto;
+  color: $color-default-white;
+  font-family: inherit;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 35px;
+  text-align: center;
+  grid-column: 1/4;
+}
+
+.questions__form p {
+  margin: 0 auto;
+  padding-bottom: 22px;
+  color: $color-default-white;
+  font-family: inherit;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  grid-column: 1/4;
+}

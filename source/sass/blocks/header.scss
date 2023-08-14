@@ -1,0 +1,99 @@
+.header {
+  position: relative;
+}
+
+.header__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+.header__background img {
+  background-color: #70a1da;
+}
+
+.header__wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 120px 80px;
+  position: relative;
+
+  @include vp-1199 {
+    padding: 0;
+  }
+}
+
+.header__wrapper::after {
+  @include vp-1199 {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: $overlay-burger-menu;
+    display: none;
+  }
+}
+
+.header__nav a {
+  color: $color-default-white;
+  cursor: pointer;
+}
+
+
+.header__nav.main-nav {
+  @include vp-1199 {
+    // width: 678px;
+    grid-template-columns: repeat(3, 33.33%);
+    gap: 50px 0;
+    padding: 30px 45px 70px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: repeat(2, 50%);
+    padding: 15px 15px 50px;
+    gap: 10px 0;
+  }
+}
+
+.header__nav .main-nav__logo {
+  @include vp-1199 {
+    margin: 0 auto;
+    grid-column: 2;
+  }
+
+  @include vp-767 {
+    margin: 0;
+    justify-self: end;
+  }
+}
+
+.header__nav .main-nav__logo img {
+  @include vp-1199 {
+    width: 144px;
+    height: 44px;
+  }
+
+  @include vp-767 {
+    width: 112px;
+    height: 34px;
+  }
+}
+
+.header__nav .main-nav__list {
+  @include vp-1199 {
+    grid-column: 1;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @include vp-767 {
+    grid-row: 3;
+  }
+}

@@ -1,0 +1,281 @@
+.hero {
+  @include vp-1199 {
+    padding: 0 45px;
+  }
+
+  @include vp-767 {
+    padding: 0 15px;
+  }
+}
+
+.hero__swiper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero__wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 59.7% 40.3%;
+
+  @include vp-1199 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.hero a {
+  text-align: center;
+  padding: 17px 20px;
+  max-width: 220px;
+}
+
+.hero__text h2 {
+  position: relative;
+  font-family: inherit;
+  font-size: 77px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 77px;
+  color: $color-default-white;
+  z-index: 3;
+
+  @include vp-1199 {
+    text-align: center;
+    font-size: 56px;
+    line-height: 56px;
+  }
+
+  @include vp-767 {
+    font-size: 30px;
+    line-height: 30px;
+  }
+}
+
+.hero__text p {
+  max-width: 464px;
+  font-family: inherit;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  color: $color-default-white;
+  padding-bottom: 35px;
+
+  @include vp-1199 {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  @include vp-767 {
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
+
+.hero__text a {
+  margin-bottom: 150px;
+
+  @include vp-1199 {
+    margin: 0 auto;
+  }
+}
+
+.hero__info {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 22% 26%;
+  gap: 10px;
+
+  @include vp-1199 {
+    display: none;
+  }
+}
+
+.hero__info span {
+  display: block;
+  padding: 14px 20px;
+  color: $color-default-white;
+  font-family: inherit;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.hero__multimedia {
+  width: 100%;
+
+  @include vp-767 {
+    display: none;
+  }
+
+  &--cards {
+    margin-top: 83px;
+  }
+}
+
+.hero__multimedia--cards img {
+  margin-left: auto;
+}
+
+.hero__multimedia--video {
+  margin-top: 180px;
+  position: relative;
+  height: 0;
+  padding-bottom: 65.5%;
+
+  @include vp-1199 {
+    margin: 0 auto;
+  }
+}
+
+.hero__multimedia--video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  --br-aspect-ratio: 482/317;
+
+  @include vp-1199 {
+    --br-aspect-ratio: 442/300;
+  }
+}
+
+.hero__multimedia--video button {
+  display: block;
+  padding: 0;
+  width: 56px;
+  height: 56px;
+  border: 1px solid $color-default-white;
+  border-radius: 50%;
+  background-color: rgba($color-default-white, 0.2);
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  user-select: none;
+  outline: none;
+  cursor: pointer;
+
+  svg {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 4px;
+    right: 0;
+    z-index: 2;
+  }
+}
+
+.hero__multimedia--audioplayer {
+  margin: 180px 0 0 auto;
+  width: 70.31%;
+  position: relative;
+  height: 0;
+  padding-bottom: 45.5%;
+
+  @include vp-1199 {
+    margin: 69px auto 0;
+    width: 340px;
+    padding-bottom: 220px;
+  }
+}
+
+.hero__multimedia--audioplayer iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  --br-aspect-ratio: 340/220;
+}
+
+.hero__audioplayer {
+  position: relative;
+}
+
+.hero__audioplayer img {
+  display: block;
+  opacity: 0.9;
+
+  @include vp-1199 {
+    opacity: 1;
+  }
+}
+
+.hero__audioplayer button {
+  width: 14%;
+  height: 21.6%;
+  padding: 0;
+  border-radius: 50%;
+  border: none;
+  background-color: $color-transparent;
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 18%;
+  margin: 0 auto;
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
+
+  & svg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+  }
+}
+
+.hero__pagination.swiper-pagination {
+  position: absolute;
+  text-align: end;
+  bottom: 10px;
+
+  @include vp-1199 {
+    text-align: center;
+    bottom: 50px;
+  }
+}
+
+.hero__pagination .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: $color-transparent;
+  border-radius: 50%;
+  border: 1px solid $color-default-white;
+  opacity: 1;
+  outline: none;
+  --swiper-pagination-bullet-horizontal-gap: 12px;
+
+  &-active {
+    background-color: $color-default-white;
+  }
+}
