@@ -1,0 +1,36 @@
+.swiper-toggle {
+  display: block;
+  border: none;
+  user-select: none;
+  cursor: pointer;
+  background-color: $navy-blue;
+  padding: 8.3px 11.5px;
+
+  svg {
+    fill: $color-default-white;
+  }
+
+  &:hover:not(:disabled),
+  &:focus-visible:not(:disabled) {
+    background-color: $color-transparent;
+    outline: 1px solid #1c3374;
+    outline-offset: -1px;
+  }
+
+  &:hover:not(:disabled) svg,
+  &:focus-visible:not(:disabled) svg {
+    fill: #1c3374;
+  }
+
+  &:active:not(:disabled) {
+    background-color: #1c3374;
+  }
+
+  &:active:not(:disabled) svg {
+    fill: $color-default-white;
+  }
+
+  &:disabled:not(:focus) {
+    opacity: 0.1;
+  }
+}

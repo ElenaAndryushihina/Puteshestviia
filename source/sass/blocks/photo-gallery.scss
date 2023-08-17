@@ -1,9 +1,139 @@
-.photo-gallery__wrapper {
-  margin: 0 auto;
-  max-width: 1440px;
-  overflow: hidden;
+.photo-gallery__swiper {
+  position: relative;
 }
 
 .photo-gallery__text {
   padding: 0 120px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  @include vp-1199 {
+    padding: 0 45px;
+  }
+
+  @include vp-767 {
+    padding: 0 15px;
+  }
+}
+
+.photo-gallery__text h3 {
+  margin: 0 0 15px 0;
+  font-family: inherit;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 35px;
+
+  @include vp-1199 {
+    font-size: 25px;
+    line-height: 25px;
+  }
+
+  @include vp-767 {
+    font-size: 22px;
+    line-height: 22px;
+  }
+}
+
+.photo-gallery__text b {
+  position: absolute;
+  top: -12px;
+  left: 120px;
+
+  @include vp-1199 {
+    top: -12px;
+    left: 45px;
+  }
+
+  @include vp-767 {
+    top: -5px;
+    left: 15px;
+  }
+}
+
+.photo-gallery__text p {
+  font-family: inherit;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  width: 58%;
+
+  @include vp-1199 {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 15px;
+  }
+}
+
+.photo-gallery__swiper .swiper-slide {
+  width: auto;
+
+  .photo-gallery__img:nth-child(2n) {
+    margin-top: 5px;
+
+    @include vp-767 {
+      margin-top: 3px;
+    }
+  }
+}
+
+.photo-gallery__img img {
+  @include vp-767 {
+    max-height: 259px;
+    max-width: 172px;
+    width: auto;
+  }
+}
+
+.photo-gallery__toggle {
+  position: absolute;
+  top: 50px;
+
+  @include vp-767 {
+    position: relative;
+    top: 0;
+  }
+}
+
+.photo-gallery-toggle-prev {
+  right: 162px;
+
+  @include vp-1199 {
+    right: 87px;
+  }
+
+  @include vp-767 {
+    right: 0;
+  }
+}
+
+.photo-gallery-toggle-next {
+  right: 120px;
+
+  @include vp-1199 {
+    right: 45px;
+  }
+
+  @include vp-767 {
+    right: 0;
+  }
+}
+
+.photo-gallery__toggle-wrapper {
+  @include vp-767 {
+    display: grid;
+    grid-template-columns: repeat(2, 37px);
+    gap: 4px;
+    margin-bottom: 15px;
+    padding-right: 15px;
+    justify-content: end;
+  }
 }

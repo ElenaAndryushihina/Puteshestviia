@@ -10,7 +10,7 @@ import {initGallerySwiper} from './modules/sliders/init-slider-gallery';
 import {initAdvantagesSwiper} from './modules/sliders/init-slider-advantages';
 import {initReviewsSwiper} from './modules/sliders/init-slider-reviews';
 import {initTrainingSwiper} from './modules/sliders/init-slider-training';
-
+import {initContactsMap} from './modules/maps/init-contacts-map';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -36,6 +36,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initAdvantagesSwiper();
     initReviewsSwiper();
     initTrainingSwiper();
+    initContactsMap();
     const form = new Form();
     window.form = form;
     form.init();
@@ -66,3 +67,24 @@ window.addEventListener('DOMContentLoaded', () => {
 // breakpointChecker();
 
 // используйте .closest(el)
+
+
+// const activeSlide = document.querySelector('.hero__swiper.swiper-slide.swiper-slide-active');
+// const activeBackground = document.querySelector('.background-active');
+// const slide = document.querySelector('.hero__swiper.swiper-slide');
+// const background = document.querySelector('.header__background');
+// // const slides = document.querySelectorAll('.hero__swiper.swiper-slide');
+// // const headerBackgrounds = document.querySelectorAll('.header__background');
+
+// const makeActiveBackground = function () {
+//   for (slide of slides) {
+//     if (slide[n].contains('swiper-slide-active')) {
+//       background[n].classList.add('background-active')
+//     }
+//     background.classList.remove('background-active'),
+//   }
+
+// };
+
+// // makeActiveBackground();
+

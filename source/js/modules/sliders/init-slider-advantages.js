@@ -1,31 +1,45 @@
 import Swiper from '../../vendor/swiper';
 
-const initAdvantagesSwiper = () => new Swiper('.advantages__swiper', {
+const initAdvantagesSwiper = () => {
 
-  navigation: {
-    nextEl: '.advantages-toggle-next',
-    prevEl: '.advantages-toggle-prev',
-  },
+  const breakpoint = window.matchMedia('(min-width:1200px)');
 
-  breakpoints: {
+  let advantagesSwiper;
 
-    1200: {
-      slidesPerView: 3,
-      spaceBetween: 30,
-      initialSlide: 1,
-    },
+  const breakpointChecker = () => {
+    if (breakpoint.matches === true) {
+      return enableAdvantagesSwiper();
+    } else if (advantagesSwiper !== undefined) {
+      advantagesSwiper.destroy(true, true);
+    }
+  };
 
-    768: {
-      // slidesPerView: 2,
-      // spaceBetween: 30,
-      // initialSlide: 2,
-    },
+  const enableAdvantagesSwiper = () => {
+    advantagesSwiper = new Swiper('.advantages__swiper', {
 
-    320: {
-      // slidesPerView: 1,
-      // initialSlide: 2,
-    },
-  },
-});
+      navigation: {
+        nextEl: '.advantages-toggle-next',
+        prevEl: '.advantages-toggle-prev',
+      },
+
+      loop: true,
+
+      allowTouchMove: false,
+
+      breakpoints: {
+
+        1200: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+          initialSlide: 2,
+          centeredSlides: true,
+        },
+      },
+    });
+  };
+
+  breakpoint.addListener(breakpointChecker);
+  breakpointChecker();
+};
 
 export {initAdvantagesSwiper};

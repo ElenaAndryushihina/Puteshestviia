@@ -1,9 +1,144 @@
 .reviews__wrapper {
-  margin: 0 auto;
-  max-width: 1440px;
-  padding-left: 120px;
+  position: relative;
+  padding: 0 0 113px 120px;
+
+  @include vp-1199 {
+    padding: 0 0 70px 45px;
+  }
+
+  @include vp-767 {
+    padding: 0 15px 60px;
+  }
 }
 
-.reviews__swiper {
-  overflow: hidden;
+.reviews__wrapper h3 {
+  padding-left: 10px;
+  font-family: inherit;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 35px;
+
+  @include vp-1199 {
+    font-size: 25px;
+    line-height: 25px;
+  }
+
+  @include vp-767 {
+    font-size: 22px;
+    line-height: 22px;
+  }
+}
+
+.reviews__wrapper b {
+  position: absolute;
+  top: -15px;
+  left: 120px;
+}
+
+.reviews__swiper .swiper-slide {
+  padding: 10px;
+}
+
+.reviews__card {
+  height: 293px;
+  box-shadow: 0 0 30px 0 rgba(28, 51, 116, 0.1);
+  padding: 20px 40px 20px 20px;
+  display: grid;
+  grid-template-columns: 34.77% 59.56%;
+  gap: 4%;
+  overflow: auto;
+
+  @include vp-1199 {
+    max-width: 560px;
+    height: 277px;
+  }
+
+  @include vp-767 {
+    max-width: none;
+    width: 100%;
+    height: 466px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.reviews__img img {
+  width: 100%;
+  height: auto;
+}
+
+.reviews__text {
+  display: flex;
+  flex-direction: column;
+}
+
+.reviews__text p {
+  font-family: inherit;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+
+  @include vp-1199 {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+.reviews__text h4 {
+  display: block;
+  margin: auto 0 8px 0;
+  font-family: inherit;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 13px;
+
+  @include vp-1199 {
+    font-size: 12px;
+    line-height: normal;
+  }
+
+  @include vp-767 {
+    line-height: 12px;
+  }
+}
+
+.reviews__text span {
+  margin-bottom: 16px;
+  font-family: inherit;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 100%;
+}
+
+.reviews__toggle {
+  position: absolute;
+  top: 0;
+}
+
+.reviews-toggle-prev {
+  right: 162px;
+
+  @include vp-1199 {
+    right: 82px;
+  }
+
+  @include vp-767 {
+    right: 52px;
+  }
+}
+
+.reviews-toggle-next {
+  right: 120px;
+
+  @include vp-1199 {
+    right: 40px;
+  }
+
+  @include vp-767 {
+    right: 10px;
+  }
 }

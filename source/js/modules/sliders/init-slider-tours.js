@@ -10,20 +10,21 @@ const initToursSwiper = () => new Swiper('.tours__swiper', {
   breakpoints: {
 
     1200: {
+      allowTouchMove: false,
       slidesPerView: 3,
       spaceBetween: 30,
-      // initialSlide: 0,
     },
 
     768: {
-      // slidesPerView: 2,
-      // spaceBetween: 30,
-      // initialSlide: 2,
+      allowTouchMove: true,
+      slidesPerView: 2,
+      spaceBetween: 18,
     },
 
     320: {
-      // slidesPerView: 1,
-      // initialSlide: 2,
+      allowTouchMove: true,
+      slidesPerView: 1,
+      spaceBetween: 0,
     },
   },
 });

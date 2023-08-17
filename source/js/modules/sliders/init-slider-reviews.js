@@ -10,20 +10,20 @@ const initReviewsSwiper = () => new Swiper('.reviews__swiper', {
   breakpoints: {
 
     1200: {
-      slidesPerView: 1.5,
-      spaceBetween: 30,
-      // initialSlide: 0,
+      allowTouchMove: false,
+      slidesPerView: 1.65,
+      spaceBetween: 10,
     },
 
     768: {
-      // slidesPerView: 2,
-      // spaceBetween: 30,
-      // initialSlide: 2,
+      allowTouchMove: true,
+      slidesPerView: 1.1,
     },
 
     320: {
-      // slidesPerView: 1,
-      // initialSlide: 2,
+      allowTouchMove: true,
+      slidesPerView: 1,
+      spaceBetween: 0,
     },
   },
 });

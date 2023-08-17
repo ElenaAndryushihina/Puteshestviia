@@ -1,11 +1,31 @@
+.footer {
+  position: relative;
+}
+
+.footer::before {
+  position: absolute;
+  content: "";
+  background-color: rgba($elephant, 0.2);
+  height: 1px;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
 .footer__wrapper {
-  padding: 53px 0 30px;
+  margin: 0 auto;
+  padding: 0 0 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 20px;
 
+  @include vp-1199 {
+    width: 678px;
+  }
+
   @include vp-767 {
+    width: 100%;
     justify-content: start;
   }
 }
@@ -91,7 +111,33 @@
   }
 }
 
-.footer__nav a {
+.footer__nav .main-nav__list a {
+  &:hover:not(:disabled)::after {
+    position: absolute;
+    content: "";
+    height: 1px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: $elephant;
+  }
+
+  &:focus:not(:disabled) {
+    outline: 1px solid $elephant;
+  }
+
+  &:active:not(:disabled) {
+    outline: none;
+  }
+
+  &:active:not(:disabled)::after {
+    display: none;
+  }
+
+  &:disabled:not(:focus) {
+    opacity: 0.5;
+  }
+
   @include vp-1199 {
     font-family: inherit;
     font-size: 14px;
@@ -117,22 +163,41 @@
   position: relative;
   width: 30px;
   height: 30px;
-  border: 1px solid rgba(45, 56, 63, 0.3);
 }
 
 .footer__social a {
   display: block;
   width: 30px;
   padding: 15px;
-}
+  outline: 1px solid rgba($elephant, 0.3);
 
-.footer__social svg {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto auto;
+  svg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto auto;
+    fill: $elephant;
+  }
+
+  &:hover:not(:disabled),
+  &:focus:not(:disabled) {
+    outline: 1px solid rgba($elephant, 1);
+  }
+
+  &:active:not(:disabled) {
+    outline: none;
+    background-color: $navy-blue;
+  }
+
+  &:active:not(:disabled) svg {
+    fill: $color-default-white;
+  }
+
+  &:disabled:not(:focus) {
+    opacity: 0.3;
+  }
 }
 
 .footer__copyright {
@@ -150,4 +215,18 @@
   font-style: normal;
   font-weight: 300;
   line-height: 100%;
+  outline: none;
+
+  &:hover:not(:disabled),
+  &:focus-visible:not(:disabled) {
+    color: #1c3374;
+  }
+
+  &:active:not(:disabled) {
+    color: $navy-blue;
+  }
+
+  &:disabled:not(:focus) {
+    opacity: 0.1;
+  }
 }

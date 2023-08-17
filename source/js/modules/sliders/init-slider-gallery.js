@@ -7,27 +7,23 @@ const initGallerySwiper = () => new Swiper('.photo-gallery__swiper', {
     prevEl: '.photo-gallery-toggle-prev',
   },
 
+  slidesPerView: 'auto',
+
   breakpoints: {
 
     1200: {
-      slidesPerView: 'auto',
+      allowTouchMove: false,
       spaceBetween: 6,
-      // grid: {
-      //   rows: 2,
-      //   columns: 7,
-      // },
-      // initialSlide: 0,
     },
 
     768: {
-      // slidesPerView: 2,
-      // spaceBetween: 30,
-      // initialSlide: 2,
+      allowTouchMove: true,
+      spaceBetween: 6,
     },
 
     320: {
-      // slidesPerView: 1,
-      // initialSlide: 2,
+      allowTouchMove: true,
+      spaceBetween: 3,
     },
   },
 });

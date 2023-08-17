@@ -10,20 +10,19 @@ const initTrainingSwiper = () => new Swiper('.training__swiper', {
   breakpoints: {
 
     1200: {
+      allowTouchMove: false,
       slidesPerView: 4,
-      spaceBetween: 30,
-      // initialSlide: 0,
+      spaceBetween: 10,
     },
 
     768: {
-      // slidesPerView: 2,
-      // spaceBetween: 30,
-      // initialSlide: 2,
+      allowTouchMove: true,
+      slidesPerView: 3,
     },
 
     320: {
-      // slidesPerView: 1,
-      // initialSlide: 2,
+      allowTouchMove: true,
+      slidesPerView: 1,
     },
   },
 });

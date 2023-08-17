@@ -1,21 +1,32 @@
 .btn {
   display: block;
   padding: 10px 20px;
-
   color: $color-default-white;
-
+  font-family: inherit;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
   background-color: $navy-blue;
   border: none;
   cursor: pointer;
   user-select: none;
+  outline: none;
 
-  // &:disabled {
-  //   opacity: 0.5;
+  &:hover:not(:disabled),
+  &:focus-visible:not(:disabled) {
+    background-color: $color-default-white;
+    color: #1c3374;
+    outline: 1px solid #1c3374;
+    outline-offset: -1px;
+  }
 
-  //   pointer-events: none;
-  // }
+  &:active:not(:disabled) {
+    background-color: #1c3374;
+    color: $color-default-white;
+  }
 
-  // @include hover-focus {
-  //   opacity: 0.8;
-  // }
+  &:disabled:not(:focus) {
+    opacity: 0.1;
+  }
 }
