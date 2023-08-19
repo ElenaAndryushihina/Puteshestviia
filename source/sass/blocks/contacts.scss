@@ -141,6 +141,8 @@
 }
 
 .contacts__list a {
+  display: block;
+  width: min-content;
   outline: none;
 
   &:hover:not(:disabled),

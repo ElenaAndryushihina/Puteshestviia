@@ -1,4 +1,4 @@
-import exports from '../../vendor/leaflet';
+const L = window.L;
 
 const initContactsMap = () => {
   // указание координат
@@ -9,7 +9,7 @@ const initContactsMap = () => {
   const element = document.getElementById('os-map');
 
   // Создание карты Leaflet.
-  const map = L.map(element, {scrollWheelZoom: false}).setView([geoLat, geoLon], 14);
+  const map = new L.Map(element, {scrollWheelZoom: false}).setView([geoLat, geoLon], 14);
   L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
     attribution: '&copy; <a href="copyright">Openstreetmap</a>',
     maxZoom: 20,

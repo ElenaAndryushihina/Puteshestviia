@@ -7,9 +7,9 @@ const initAdvantagesSwiper = () => {
   let advantagesSwiper;
 
   const breakpointChecker = () => {
-    if (breakpoint.matches === true) {
-      return enableAdvantagesSwiper();
-    } else if (advantagesSwiper !== undefined) {
+    if (breakpoint.matches) {
+      enableAdvantagesSwiper();
+    } else if (advantagesSwiper) {
       advantagesSwiper.destroy(true, true);
     }
   };

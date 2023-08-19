@@ -1,54 +1,5 @@
 .header {
   position: relative;
-  background-color: #70a1da;
-  min-height: 800px;
-
-  &::after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-image: $overlay-hero;
-  }
-
-  @include vp-1199 {
-    min-height: 1024px;
-  }
-
-  @include vp-767 {
-    min-height: 568px;
-  }
-}
-
-.header__background {
-  display: none;
-
-  &.background-active {
-    display: block;
-    
-  }
-  @include vp-1199 {
-    // height: 85%;
-  }
-
-  @include vp-767 {
-    // height: 77.6%;
-  }
-}
-
-.header__background img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 0;
-  background-color: #70a1da;
 }
 
 .header .container {
@@ -58,57 +9,25 @@
 }
 
 .header__wrapper {
+  position: absolute;
+  z-index: 2;
+  max-width: 1440px;
   margin: 0 auto;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  padding: 0 0 80px;
-  position: relative;
-  z-index: 1;
+  padding: 40px 120px 0;
+  top: 0;
+  right: 0;
+  left: 0;
 
   @include vp-1199 {
-    padding: 0;
+    padding: 30px 0 0;
   }
 
   @include vp-767 {
-    margin-bottom: 60px;
+    padding: 15px 0 0;
   }
 }
 
-.header__wrapper::after {
-  @include vp-1199 {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    background-color: $overlay-burger-menu;
-    display: none;
-  }
-}
-
-.header__nav a {
-  color: $color-default-white;
-  cursor: pointer;
-}
-
-
-.header__nav.main-nav {
-  @include vp-1199 {
-    // width: 678px;
-    grid-template-columns: repeat(3, 33.33%);
-    gap: 50px 0;
-    padding: 30px 45px 70px;
-  }
-
-  @include vp-767 {
-    grid-template-columns: repeat(2, 50%);
-    padding: 15px 15px 50px;
-    gap: 10px 0;
-  }
-}
-
-.header__nav .main-nav__logo {
+.header__wrapper .main-nav__logo {
   @include vp-1199 {
     margin: 0 auto;
     grid-column: 2;
@@ -120,7 +39,7 @@
   }
 }
 
-.header__nav .main-nav__logo img {
+.header__wrapper .main-nav__logo img {
   @include vp-1199 {
     width: 144px;
     height: 44px;
@@ -132,20 +51,53 @@
   }
 }
 
-.header__nav .main-nav__list {
-  @include vp-1199 {
-    grid-column: 1;
-    grid-row: 2;
-    display: flex;
-    flex-direction: column;
-  }
+.header__wrapper.main-nav .logo-dark {
+  display: none;
+}
 
-  @include vp-767 {
-    grid-row: 3;
+.header__wrapper.main-nav.no-js .logo-dark,
+.header__wrapper.main-nav.is-open .logo-dark {
+  @include vp-1199 {
+    display: block;
   }
 }
 
-.header__nav .main-nav__list a {
+.header__wrapper.main-nav.no-js .logo-light,
+.header__wrapper.main-nav.is-open .logo-light {
+  @include vp-1199 {
+    display: none;
+  }
+}
+
+.header__wrapper .main-nav__toggle {
+  padding: 0;
+  width: 26px;
+  height: 26px;
+  display: none;
+  border: none;
+  cursor: pointer;
+  background-color: $color-transparent;
+  position: relative;
+
+  svg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  @include vp-1199 {
+    display: block;
+    grid-column: 1;
+    grid-row: 1;
+  }
+}
+
+.header__wrapper .main-nav__list a {
+  color: $color-default-white;
+
   &:hover:not(:disabled)::after {
     position: absolute;
     content: "";
@@ -170,5 +122,167 @@
 
   &:disabled:not(:focus) {
     opacity: 0.5;
+  }
+
+  @include vp-1199 {
+    color: inherit;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0.64px;
+    text-transform: uppercase;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+    letter-spacing: 0.56px;
+  }
+}
+
+.header__wrapper.main-nav.no-js .main-nav__toggle {
+  @include vp-1199 {
+    display: none;
+  }
+}
+
+.header__wrapper.main-nav.is-open .main-nav__toggle svg {
+  @include vp-1199 {
+    display: none;
+  }
+}
+
+.header__wrapper.main-nav.is-open .main-nav__toggle::before {
+  @include vp-1199 {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 2px;
+    background-color: $elephant;
+    transform: rotate(135deg);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+}
+
+.header__wrapper.main-nav.is-open .main-nav__toggle::after {
+  @include vp-1199 {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 2px;
+    background-color: $elephant;
+    transform: rotate(45deg);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+}
+
+.header__wrapper.main-nav {
+  @include vp-1199 {
+    grid-template-columns: repeat(3, 33.33%);
+    gap: 50px 0;
+    padding: 30px 45px 70px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: repeat(2, 50%);
+    padding: 15px 15px 50px;
+    gap: 10px 0;
+  }
+}
+
+.header__wrapper.main-nav.is-open {
+  @include vp-1199 {
+    z-index: 11;
+  }
+}
+
+.header__wrapper.main-nav.is-open,
+.header__wrapper.main-nav.no-js {
+  @include vp-1199 {
+    background-color: $color-default-white;
+  }
+}
+
+.header__wrapper.main-nav.no-js {
+  @include vp-1199 {
+    position: relative;
+  }
+}
+
+.header__wrapper.main-nav.is-close nav {
+  @include vp-1199 {
+    display: none;
+  }
+
+  @include vp-767 {
+    grid-row: 3;
+  }
+}
+
+.header__wrapper.main-nav.is-open nav,
+.header__wrapper.main-nav.no-js nav {
+  @include vp-1199 {
+    display: block;
+    grid-column: 1;
+    grid-row: 2;
+  }
+}
+
+.header__wrapper.main-nav.is-open .main-nav__list,
+.header__wrapper.main-nav.no-js .main-nav__list {
+  @include vp-1199 {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+.header__wrapper.main-nav.is-open .main-nav__list li:not(:last-child),
+.header__wrapper.main-nav.no-js .main-nav__list li:not(:last-child) {
+  @include vp-1199 {
+    margin-bottom: 26px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 22px;
+  }
+}
+
+.header__wrapper.main-nav.is-open .main-nav__phone a,
+.header__wrapper.main-nav.no-js .main-nav__phone a {
+  @include vp-1199 {
+    color: $elephant;
+  }
+
+  &:hover:not(:disabled),
+  &:focus-visible:not(:disabled) {
+    color: #1c3374;
+  }
+
+  &:active:not(:disabled) {
+    color: $navy-blue;
+  }
+}
+
+.header__wrapper .main-nav__phone a {
+  color: $color-default-white;
+}
+
+.header__wrapper .main-nav__phone {
+  @include vp-1199 {
+    justify-self: end;
+    grid-column: 3;
+  }
+
+  @include vp-767 {
+    grid-column: 2;
   }
 }
