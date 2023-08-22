@@ -1,5 +1,10 @@
 .photo-gallery__swiper {
+  margin-top: 45px;
   position: relative;
+
+  @include vp-1199 {
+    margin-top: 3px;
+  }
 }
 
 .photo-gallery__text {
@@ -18,22 +23,8 @@
 }
 
 .photo-gallery__text h3 {
-  margin: 0 0 15px 0;
-  font-family: inherit;
-  font-size: 35px;
-  font-style: normal;
-  font-weight: 800;
-  line-height: 35px;
-
-  @include vp-1199 {
-    font-size: 25px;
-    line-height: 25px;
-  }
-
-  @include vp-767 {
-    font-size: 22px;
-    line-height: 22px;
-  }
+  margin: 0 0 24px 0;
+  color: inherit;
 }
 
 .photo-gallery__text b {
@@ -53,6 +44,7 @@
 }
 
 .photo-gallery__text p {
+  margin: 0 0 45px 0;
   font-family: inherit;
   font-size: 16px;
   font-style: normal;
@@ -61,6 +53,7 @@
   width: 58%;
 
   @include vp-1199 {
+    margin-bottom: 36px;
     font-size: 14px;
     line-height: 22px;
   }
@@ -86,6 +79,8 @@
 }
 
 .photo-gallery__img img {
+  background-color: #93c9da;
+
   @include vp-767 {
     max-height: 259px;
     max-width: 172px;
@@ -95,7 +90,7 @@
 
 .photo-gallery__toggle {
   position: absolute;
-  top: 50px;
+  top: 65px;
 
   @include vp-767 {
     position: relative;
@@ -104,7 +99,7 @@
 }
 
 .photo-gallery-toggle-prev {
-  right: 162px;
+  right: 161px;
 
   @include vp-1199 {
     right: 87px;

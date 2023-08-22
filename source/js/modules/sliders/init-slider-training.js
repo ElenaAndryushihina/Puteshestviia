@@ -7,6 +7,8 @@ const initTrainingSwiper = () => new Swiper('.training__swiper', {
     prevEl: '.training-toggle-prev',
   },
 
+  heightAuto: true,
+
   breakpoints: {
 
     1200: {
@@ -18,11 +20,13 @@ const initTrainingSwiper = () => new Swiper('.training__swiper', {
     768: {
       allowTouchMove: true,
       slidesPerView: 3,
+      spaceBetween: 10,
     },
 
     320: {
       allowTouchMove: true,
       slidesPerView: 1,
+      spaceBetween: 0,
     },
   },
 });

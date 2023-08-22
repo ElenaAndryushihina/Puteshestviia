@@ -89,10 +89,20 @@
   }
 
   @include vp-1199 {
+    margin-top: 9px;
     display: block;
     grid-column: 1;
     grid-row: 1;
   }
+
+  @include vp-767 {
+    margin-top: 0;
+  }
+}
+
+.header__wrapper .main-nav__list {
+  padding-top: 20px;
+  gap: 10px 2.9%;
 }
 
 .header__wrapper .main-nav__list a {
@@ -185,6 +195,8 @@
 }
 
 .header__wrapper.main-nav {
+  grid-template-columns: 20% auto 15%;
+
   @include vp-1199 {
     grid-template-columns: repeat(3, 33.33%);
     gap: 50px 0;
@@ -277,12 +289,16 @@
 }
 
 .header__wrapper .main-nav__phone {
+  padding-top: 23.3px;
+
   @include vp-1199 {
+    padding-top: 17px;
     justify-self: end;
     grid-column: 3;
   }
 
   @include vp-767 {
+    padding-top: 0;
     grid-column: 2;
   }
 }

@@ -1,16 +1,17 @@
 .contacts__wrapper {
-  padding: 61px 0 104px;
+  padding: 82px 0 102px;
   display: grid;
   grid-template-columns: 40.25% 48.75%;
   gap: 11%;
 
   @include vp-1199 {
+    padding: 88px 0 68px;
     display: flex;
     flex-direction: column;
   }
 
   @include vp-767 {
-    padding: 60px 0 30px;
+    padding: 62px 0 28px;
   }
 }
 
@@ -21,21 +22,15 @@
 }
 
 .contacts__text h3 {
-  margin: 0 0 26px;
-  font-family: inherit;
-  font-size: 35px;
-  font-style: normal;
-  font-weight: 800;
-  line-height: 35px;
+  margin: 0 0 24px;
+  color: inherit;
 
   @include vp-1199 {
-    font-size: 25px;
-    line-height: 25px;
+    margin-bottom: 18px;
   }
 
   @include vp-767 {
-    font-size: 22px;
-    line-height: 22px;
+    margin-bottom: 14px;
   }
 }
 
@@ -50,7 +45,7 @@
 }
 
 .contacts__text b + p {
-  margin: 0 0 50px;
+  margin: 0 0 49px;
   font-family: inherit;
   font-size: 16px;
   font-style: normal;
@@ -58,6 +53,7 @@
   line-height: 24px;
 
   @include vp-1199 {
+    margin-bottom: 40px;
     max-width: 71.3%;
   }
 
@@ -65,44 +61,77 @@
     max-width: 98%;
     font-size: 14px;
     line-height: 20px;
+    margin-bottom: 30px;
   }
 }
 
 .contacts__list {
   display: flex;
   flex-direction: column;
-  gap: 35px;
+  gap: 34px;
 
   @include vp-1199 {
     display: grid;
     grid-template-columns: repeat(3, auto);
-    gap: 44px;
+    gap: 47px;
     margin-bottom: 40px;
   }
 
   @include vp-767 {
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    margin-bottom: 30px;
+    gap: 31px;
+    margin-bottom: 34px;
   }
 }
 
-.contacts__list li {
-  padding-left: 50px;
+.contacts__item {
+  padding-left: 56px;
   position: relative;
   display: flex;
   flex-direction: column;
 
+  @include vp-1199 {
+    padding-left: 32px;
+  }
+
   svg {
     position: absolute;
-    top: 10px;
+  }
+}
+
+.contacts__item--phone svg {
+  top: 12px;
+  left: 0;
+
+  @include vp-1199 {
+    top: 0;
+    left: 0;
+  }
+}
+
+.contacts__item--mail svg {
+  top: 16px;
+  left: 0;
+
+  @include vp-1199 {
+    top: 2px;
+    left: 0;
+  }
+}
+
+.contacts__item--address svg {
+  top: 12px;
+  left: 3px;
+
+  @include vp-1199 {
+    top: 0;
     left: 0;
   }
 }
 
 .contacts__list h4 {
-  margin: 0 0 8px;
+  margin: 0 0 9px;
   font-family: inherit;
   font-size: 18px;
   font-style: normal;
@@ -110,6 +139,7 @@
   line-height: 18px;
 
   @include vp-1199 {
+    margin-bottom: 6px;
     font-size: 16px;
     line-height: 16px;
   }

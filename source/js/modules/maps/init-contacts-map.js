@@ -16,6 +16,7 @@ const initContactsMap = () => {
     subdomains: ['mt0', 'mt1', 'mt2', 'mt3'],
   }).addTo(map);
 
+  // Создание своей метки для карты.
   const myIcon = L.icon({
     iconUrl: 'img/svg/map-pin.svg',
     iconSize: [34, 44],
@@ -34,4 +35,3 @@ const initContactsMap = () => {
 };
 
 export {initContactsMap};
-

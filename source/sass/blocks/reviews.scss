@@ -1,9 +1,9 @@
 .reviews__wrapper {
   position: relative;
-  padding: 0 0 113px 120px;
+  padding: 0 0 113px 110px;
 
   @include vp-1199 {
-    padding: 0 0 70px 45px;
+    padding: 0 0 64px 35px;
   }
 
   @include vp-767 {
@@ -12,21 +12,12 @@
 }
 
 .reviews__wrapper h3 {
+  margin: 60px 0 18px 0;
   padding-left: 10px;
-  font-family: inherit;
-  font-size: 35px;
-  font-style: normal;
-  font-weight: 800;
-  line-height: 35px;
+  color: inherit;
 
   @include vp-1199 {
-    font-size: 25px;
-    line-height: 25px;
-  }
-
-  @include vp-767 {
-    font-size: 22px;
-    line-height: 22px;
+    margin: 0 0 18px 0;
   }
 }
 
@@ -34,28 +25,34 @@
   position: absolute;
   top: -15px;
   left: 120px;
+
+  @include vp-1199 {
+    left: 45px;
+  }
 }
 
-.reviews__swiper .swiper-slide {
+.reviews__swiper .swiper-wrapper {
   padding: 10px;
 }
 
 .reviews__card {
+  background-color: $color-default-white;
   height: 293px;
   box-shadow: 0 0 30px 0 rgba(28, 51, 116, 0.1);
-  padding: 20px 40px 20px 20px;
+  padding: 19px 40px 19px 20px;
   display: grid;
-  grid-template-columns: 34.77% 59.56%;
+  grid-template-columns: 34.8% 61.2%;
   gap: 4%;
   overflow: auto;
 
   @include vp-1199 {
-    max-width: 560px;
+    padding: 19px 30px 19px 20px;
+    grid-template-columns: 36.5% 57.5%;
+    gap: 6%;
     height: 277px;
   }
 
   @include vp-767 {
-    max-width: none;
     width: 100%;
     height: 466px;
     display: flex;
@@ -64,8 +61,10 @@
 }
 
 .reviews__img img {
+  background-color: #bacad3;
   width: 100%;
   height: auto;
+  object-fit: cover;
 }
 
 .reviews__text {
@@ -74,6 +73,7 @@
 }
 
 .reviews__text p {
+  margin: 13px 0 0 0;
   font-family: inherit;
   font-size: 14px;
   font-style: normal;
@@ -81,6 +81,7 @@
   line-height: 22px;
 
   @include vp-1199 {
+    margin: 3px 0 7px 0;
     font-size: 12px;
     line-height: 18px;
   }
@@ -96,6 +97,7 @@
   line-height: 13px;
 
   @include vp-1199 {
+    margin-bottom: 6px;
     font-size: 12px;
     line-height: normal;
   }
@@ -112,15 +114,19 @@
   font-style: normal;
   font-weight: 300;
   line-height: 100%;
+
+  @include vp-1199 {
+    margin-bottom: 5px;
+  }
 }
 
 .reviews__toggle {
   position: absolute;
-  top: 0;
+  top: -13px;
 }
 
 .reviews-toggle-prev {
-  right: 162px;
+  right: 161px;
 
   @include vp-1199 {
     right: 82px;

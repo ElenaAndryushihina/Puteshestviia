@@ -12,12 +12,13 @@ const initReviewsSwiper = () => new Swiper('.reviews__swiper', {
     1200: {
       allowTouchMove: false,
       slidesPerView: 1.65,
-      spaceBetween: 10,
+      spaceBetween: 25,
     },
 
     768: {
       allowTouchMove: true,
-      slidesPerView: 1.1,
+      slidesPerView: 1.26,
+      spaceBetween: 10,
     },
 
     320: {

@@ -12,6 +12,7 @@
   cursor: pointer;
   user-select: none;
   outline: none;
+  overflow-wrap: break-word;
 
   &:hover:not(:disabled),
   &:focus-visible:not(:disabled) {

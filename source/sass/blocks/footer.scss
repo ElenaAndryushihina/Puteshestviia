@@ -14,26 +14,32 @@
 
 .footer__wrapper {
   margin: 0 auto;
-  padding: 0 0 30px;
+  padding: 32px 0 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 20px;
+  gap: 13px;
 
   @include vp-1199 {
+    padding: 45px 0 35px;
     width: 678px;
+    gap: 13px;
   }
 
   @include vp-767 {
     width: 100%;
     justify-content: start;
+    padding: 32px 0 26px;
+    gap: 14px;
   }
 }
 
 .footer__nav.main-nav {
+  grid-template-columns: 17.5% auto 17.5%;
+
   @include vp-1199 {
     grid-template-columns: 118px auto;
-    column-gap: auto;
+    column-gap: 77px;
   }
 
   @include vp-767 {
@@ -41,7 +47,7 @@
     display: flex;
     flex-direction: column;
     align-items: start;
-    gap: 20px;
+    gap: 12px;
   }
 }
 
@@ -52,18 +58,24 @@
 }
 
 .footer__nav.main-nav .main-nav__list {
+  padding-top: 19px;
+  gap: 5px 3%;
+  max-width: 700px;
+
   @include vp-1199 {
-    gap: 20px;
+    padding-top: 3px;
+    gap: 9px;
   }
 
   @include vp-767 {
     max-width: none;
     width: 100%;
     grid-template-columns: repeat(2, 48%);
+    gap: 5px 12px;
   }
 }
 
-.footer__nav.main-nav .main-nav__list li {
+.footer__nav.main-nav .main-nav__item {
   @include vp-767 {
     justify-self: start;
   }
@@ -106,8 +118,16 @@
 }
 
 .footer__nav .main-nav__phone {
+  padding-top: 21px;
+
   @include vp-1199 {
     display: none;
+  }
+}
+
+.footer__nav .main-nav__logo {
+  @include vp-767 {
+    padding-left: 4px;
   }
 }
 
@@ -160,13 +180,18 @@
 }
 
 .footer__social ul {
-  margin: 0 auto;
+  margin: 4px auto 0;
   display: grid;
   grid-template-columns: repeat(3, auto);
   gap: 15px;
   justify-content: center;
 
+  @include vp-1199 {
+    margin-top: 24px;
+  }
+
   @include vp-767 {
+    margin: 8px 0 0 5px;
     justify-content: start;
   }
 }
