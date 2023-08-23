@@ -39,7 +39,7 @@
   }
 }
 
-.header__wrapper .main-nav__logo img {
+.header__wrapper img {
   @include vp-1199 {
     width: 144px;
     height: 44px;
@@ -105,7 +105,7 @@
   gap: 10px 2.9%;
 }
 
-.header__wrapper .main-nav__list a {
+.header__wrapper .site-list__link {
   color: $color-default-white;
 
   &:hover:not(:disabled)::after {
@@ -156,7 +156,7 @@
   }
 }
 
-.header__wrapper.main-nav.is-open .main-nav__toggle svg {
+.header__wrapper.main-nav.is-open svg {
   @include vp-1199 {
     display: none;
   }
@@ -257,8 +257,8 @@
   }
 }
 
-.header__wrapper.main-nav.is-open .main-nav__list li:not(:last-child),
-.header__wrapper.main-nav.no-js .main-nav__list li:not(:last-child) {
+.header__wrapper.main-nav.is-open .site-item:not(:last-child),
+.header__wrapper.main-nav.no-js .site-item:not(:last-child) {
   @include vp-1199 {
     margin-bottom: 26px;
   }
@@ -268,8 +268,8 @@
   }
 }
 
-.header__wrapper.main-nav.is-open .main-nav__phone a,
-.header__wrapper.main-nav.no-js .main-nav__phone a {
+.header__wrapper.main-nav.is-open .main-nav__phone-link,
+.header__wrapper.main-nav.no-js .main-nav__phone-link {
   @include vp-1199 {
     color: $elephant;
   }
@@ -284,7 +284,7 @@
   }
 }
 
-.header__wrapper .main-nav__phone a {
+.header__wrapper .main-nav__phone-link {
   color: $color-default-white;
 }
 

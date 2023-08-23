@@ -1,4 +1,4 @@
-import Swiper from '../../vendor/swiper';
+const Swiper = global.Swiper;
 
 const initAdvantagesSwiper = () => {
 
