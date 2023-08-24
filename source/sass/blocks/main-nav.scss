@@ -91,3 +91,39 @@
     line-height: 14px;
   }
 }
+
+.main-nav__item--tours {
+  @include vp-767 {
+    order: -5;
+  }
+}
+
+.main-nav__item--training {
+  @include vp-767 {
+    order: -3;
+  }
+}
+
+.main-nav__item--about {
+  @include vp-767 {
+    order: -1;
+  }
+}
+
+.main-nav__item--reviews {
+  @include vp-767 {
+    order: -4;
+  }
+}
+
+.main-nav__item--photos {
+  @include vp-767 {
+    order: -2;
+  }
+}
+
+.main-nav__item--contacts {
+  @include vp-767 {
+    order: -1;
+  }
+}
