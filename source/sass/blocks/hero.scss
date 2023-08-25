@@ -125,6 +125,7 @@
   }
 
   @include vp-767 {
+    width: 98%;
     font-size: 15px;
     line-height: 20px;
     margin-bottom: 19px;
@@ -281,12 +282,12 @@
 
 .hero__multimedia--cards {
   width: 142.4%;
-  margin-top: 28px;
+  margin-top: 20px;
   transform: translateX(-29%);
 
   @include vp-1199 {
     width: 442px;
-    margin: 0 auto 0;
+    margin: -16px auto 0;
     transform: translateX(0);
   }
 }
@@ -298,15 +299,15 @@
 }
 
 .hero__multimedia--audioplayer {
-  margin-top: 110px;
+  margin-top: 119px;
   width: 218%;
   position: relative;
   height: 0;
   padding-bottom: 45.5%;
-  transform: translateX(-52%);
+  transform: translateX(-54%);
 
   @include vp-1199 {
-    margin: 0 auto 189px;
+    margin: 19px auto 189px;
     width: 340px;
     padding-bottom: 220px;
     transform: translateX(0);

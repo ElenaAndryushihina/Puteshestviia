@@ -8,7 +8,7 @@
   margin: 123px 0 100px;
 
   @include vp-1199 {
-    margin: 88px 0 0 0;
+    margin: 83px 0 0 0;
   }
 
   @include vp-767 {
@@ -17,9 +17,13 @@
 }
 
 .tours__swiper h3 {
-  margin: 0 0 43px -7px;
+  margin: 0 0 53px 0;
   padding: 0;
   color: inherit;
+
+  @include vp-1199 {
+    margin: 0 0 43px -7px;
+  }
 
   @include vp-767 {
     margin: 0 0 27px 0;
@@ -38,7 +42,7 @@
   overflow: hidden;
 
   @include vp-1199 {
-    padding: 0 7px;
+    padding: 5px 7px 0;
   }
 
   @include vp-767 {
@@ -91,27 +95,53 @@
 }
 
 .tours__text h4 {
+  margin: 24px 0 37px 0;
   color: $color-default-white;
   font-family: inherit;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
   line-height: 28px;
+  position: relative;
+
+  @include vp-1199 {
+    margin: 24px 0 39px 0;
+  }
+
+  @include vp-767 {
+    margin: 14px 0 30px 0;
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.tours__text h4::after {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 1px;
+  background-color: rgba($color-default-white, 0.2);
+  bottom: -16px;
+  left: 0;
 }
 
 .tours__info {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(3, auto);
-  justify-content: space-between;
+  grid-template-columns: 32% 33% 35%;
+  gap: 0;
   order: -1;
 
   @include vp-767 {
     width: 70%;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: 53% 40%;
     justify-content: start;
     gap: 10px;
   }
+}
+
+.tours__info--altai {
+  gap: 1px;
 }
 
 .tours__info h5 {
@@ -130,33 +160,56 @@
   }
 }
 
+.tours__info .pin h5 {
+  padding-left: 12px;
+}
+
 .tours__info li {
-  padding: 10px;
   display: flex;
-  align-items: center;
+  justify-content: end;
   position: relative;
+}
+
+.tours__info li.sun {
+  @include vp-767 {
+    justify-self: start;
+    transform: translateX(5px);
+  }
+}
+
+.tours__info:not(.tours__info--altai) li {
+  padding: 9px 8px;
+}
+
+.tours__info--altai li {
+  padding: 9px 0;
 }
 
 .tours__info svg {
   position: absolute;
   top: 5px;
-  left: 10px;
+  right: 56px;
 
   @include vp-1199 {
-    left: 5px;
+    right: 56px;
   }
+}
+
+.tours__info svg.moon {
+  right: 64px;
 }
 
 .tours__info li.pin svg {
   top: 10px;
-  left: 25px;
+  right: 70%;
 
   @include vp-1199 {
-    left: 10px;
+    right: 73%;
   }
 }
 
 .tours__info li.pin {
+  justify-content: center;
   background-color: #0266c1;
 
   @include vp-767 {
@@ -167,9 +220,21 @@
 }
 
 .tours__list {
+  margin: 0 0 5px 0;
   display: grid;
-  grid-template-columns: repeat(3, auto);
-  justify-content: space-between;
+  grid-template-columns: 39% 40% 21%;
+
+  @include vp-1199 {
+    grid-template-columns: 37% 38% 25%;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 35% 40% 25%;
+  }
+}
+
+.tours__list .complexity {
+  justify-self: start;
 }
 
 .tours__list dt {
@@ -183,7 +248,7 @@
 }
 
 .tours__list dd {
-  margin: 0;
+  margin: 5px 0 0 0;
   color: $color-default-white;
   font-family: inherit;
   font-size: 13px;
@@ -195,19 +260,24 @@
 .tours__rating {
   display: grid;
   grid-template-columns: repeat(5, min-content);
+  gap: 1px;
+
+  @include vp-767 {
+    gap: 0;
+  }
 }
 
 .tours__toggle {
   position: absolute;
   top: 0;
+
+  @include vp-767 {
+    top: 2px;
+  }
 }
 
 .tours-toggle-prev {
   right: 41px;
-
-  @include vp-1199 {
-    right: 49px;
-  }
 
   @include vp-767 {
     right: 42px;
@@ -216,14 +286,6 @@
 
 .tours-toggle-next {
   right: 0;
-
-  @include vp-1199 {
-    right: 7px;
-  }
-
-  @include vp-767 {
-    right: 0;
-  }
 }
 
 .tours__wrapper a {
@@ -260,7 +322,7 @@
   }
 
   @include vp-767 {
-    margin-top: 26px;
+    margin-top: 24px;
     font-size: 14px;
     line-height: 14px;
     letter-spacing: 0.56px;
