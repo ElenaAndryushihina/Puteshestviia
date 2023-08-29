@@ -24,8 +24,6 @@ const initAdvantagesSwiper = () => {
 
       loop: true,
 
-      allowTouchMove: false,
-
       breakpoints: {
 
         1200: {

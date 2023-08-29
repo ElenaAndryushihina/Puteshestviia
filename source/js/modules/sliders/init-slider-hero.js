@@ -8,21 +8,6 @@ const initHeroSwiper = () => new Swiper('.hero__swiper', {
   },
 
   loop: true,
-
-  breakpoints: {
-
-    1200: {
-      allowTouchMove: false,
-    },
-
-    768: {
-      allowTouchMove: true,
-    },
-
-    320: {
-      allowTouchMove: true,
-    },
-  },
 });
 
 export {initHeroSwiper};

@@ -7,12 +7,12 @@
   }
 
   @include vp-767 {
-    padding: 0 5px 45px;
+    padding: 0 5px 5px;
   }
 }
 
 .reviews__wrapper h3 {
-  margin: 60px 0 18px 0;
+  margin: 29px 0 18px 0;
   padding-left: 10px;
   color: inherit;
 
@@ -21,7 +21,7 @@
   }
 
   @include vp-767 {
-    margin: -1px 0 23px 0;
+    margin: -1px 0 12px 0;
   }
 }
 
@@ -42,34 +42,31 @@
 
 .reviews__swiper .swiper-wrapper {
   padding: 10px;
+}
 
-  @include vp-767 {
-    padding: 0;
-  }
+.reviews__swiper .swiper-slide {
+  height: auto;
 }
 
 .reviews__card {
+  height: 100%;
   background-color: $color-default-white;
-  height: 293px;
   box-shadow: 0 0 30px 0 rgba(28, 51, 116, 0.1);
   padding: 19px 40px 19px 20px;
   display: grid;
-  grid-template-columns: 34.8% 61.2%;
-  gap: 4%;
-  overflow: auto;
+  grid-template-columns: 35.4% auto;
+  gap: 4.2%;
 
   @include vp-1199 {
     padding: 19px 30px 19px 20px;
-    grid-template-columns: 35.1% 59.2%;
-    gap: 5.7%;
-    height: 277px;
+    grid-template-columns: 36.4% auto;
+    gap: 6%;
   }
 
   @include vp-767 {
     padding: 19px 19.5px 19px 19.5px;
-    margin: 10px;
+    margin: 10px 0;
     width: 94%;
-    height: 466px;
     display: flex;
     flex-direction: column;
     gap: 0;
@@ -92,14 +89,22 @@
 .reviews__text {
   display: flex;
   flex-direction: column;
+}
+
+.reviews__text p:first-child {
+  margin-top: 13px;
+
+  @include vp-1199 {
+    margin-top: 3px;
+  }
 
   @include vp-767 {
-    margin-top: auto;
+    margin-top: 0;
   }
 }
 
 .reviews__text p {
-  margin: 13px 0 0 0;
+  margin: 0 0 13px 0;
   font-family: inherit;
   font-size: 14px;
   font-style: normal;
@@ -107,7 +112,7 @@
   line-height: 22px;
 
   @include vp-1199 {
-    margin: 3px 0 7px 0;
+    margin: 0 0 10px 0;
     font-size: 12px;
     line-height: 18px;
   }
@@ -133,7 +138,7 @@
   }
 
   @include vp-767 {
-    margin-top: 7px;
+    margin-top: 8px;
     line-height: 12px;
   }
 }
@@ -147,7 +152,7 @@
   line-height: 100%;
 
   @include vp-1199 {
-    margin-bottom: 5px;
+    margin-bottom: 3px;
   }
 }
 

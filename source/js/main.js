@@ -1,7 +1,7 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
-import {openMenu} from './utils/menu';
+import {initMenu} from './utils/menu';
 import {toPlayVideo} from './utils/play-video';
 import {toPlayAudio} from './utils/play-audio';
 import {initHeroSwiper} from './modules/sliders/init-slider-hero';
@@ -22,7 +22,7 @@ window.addEventListener('DOMContentLoaded', () => {
   iosVhFix();
   toPlayVideo();
   toPlayAudio();
-  openMenu();
+  initMenu();
 
   // Modules
   // ---------------------------------

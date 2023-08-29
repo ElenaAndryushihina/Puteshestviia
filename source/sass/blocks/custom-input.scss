@@ -4,12 +4,13 @@
   max-width: 340px;
 
   @include vp-1199 {
-    max-width: 266px;
-    margin: 0 0 7px 13px;
+    width: 89%;
+    max-width: none;
+    margin: 0 auto 7px;
   }
 
   @include vp-767 {
-    max-width: none;
+    width: 100%;
     margin: 0 0 7px 0;
   }
 
@@ -67,23 +68,8 @@
   }
 
   &.is-invalid {
-    &::after {
-      position: absolute;
-      content: "";
-      bottom: -56px;
-      left: -1px;
-      right: -1px;
-      height: 55px;
-      background-color: $color-default-white;
-
-      @include vp-1199 {
-        display: none;
-      }
-    }
-
-    @include vp-1199 {
-      padding-bottom: 55px;
-      background-color: $color-default-white;
+    .input-message {
+      display: none;
     }
 
     input {
@@ -97,23 +83,8 @@
   }
 
   &.is-valid {
-    &::after {
-      position: absolute;
-      content: "";
-      bottom: -56px;
-      left: -1px;
-      right: -1px;
-      height: 55px;
-      background-color: $color-default-white;
-
-      @include vp-1199 {
-        display: none;
-      }
-    }
-
-    @include vp-1199 {
-      padding-bottom: 55px;
-      background-color: $color-default-white;
+    .input-message {
+      display: none;
     }
 
     input {
@@ -123,21 +94,6 @@
       &:hover {
         outline: 2px solid rgba($color-success, 0.5);
       }
-    }
-  }
-
-  .input-message {
-    position: absolute;
-    top: 65px;
-    left: 10px;
-    z-index: 2;
-
-    &.is-invalid {
-      color: $color-error;
-    }
-
-    &.is-valid {
-      color: $color-success;
     }
   }
 }

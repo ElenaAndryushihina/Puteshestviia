@@ -10,7 +10,7 @@
 
 .header__wrapper {
   position: absolute;
-  z-index: 2;
+  z-index: 15;
   max-width: 1440px;
   margin: 0 auto;
   padding: 40px 120px 0;
@@ -39,7 +39,9 @@
   }
 }
 
-.header__wrapper img {
+.header__wrapper .logo-icon {
+  fill: $color-default-white;
+
   @include vp-1199 {
     width: 144px;
     height: 44px;
@@ -51,21 +53,10 @@
   }
 }
 
-.header__wrapper.main-nav .logo-dark {
-  display: none;
-}
-
-.header__wrapper.main-nav.no-js .logo-dark,
-.header__wrapper.main-nav.is-open .logo-dark {
+.header__wrapper.no-js .logo-icon,
+.header__wrapper.is-open .logo-icon {
   @include vp-1199 {
-    display: block;
-  }
-}
-
-.header__wrapper.main-nav.no-js .logo-light,
-.header__wrapper.main-nav.is-open .logo-light {
-  @include vp-1199 {
-    display: none;
+    fill: $elephant;
   }
 }
 
@@ -78,6 +69,20 @@
   cursor: pointer;
   background-color: $color-transparent;
   position: relative;
+  outline: none;
+
+  &:hover:not(:disabled),
+  &:focus-visible:not(:disabled) {
+    opacity: 0.7;
+  }
+
+  &:active:not(:disabled) {
+    opacity: 0.4;
+  }
+
+  &:disabled:not(:focus) {
+    opacity: 0.1;
+  }
 
   svg {
     position: absolute;
@@ -86,6 +91,10 @@
     left: 0;
     right: 0;
     margin: auto;
+
+    @include vp-767 {
+      top: 3px;
+    }
   }
 
   @include vp-1199 {
@@ -93,19 +102,23 @@
     display: block;
     grid-column: 1;
     grid-row: 1;
+    transform: translate(-2px, 0);
   }
 
   @include vp-767 {
     margin-top: 0;
+    transform: translate(0, -2px);
   }
 }
 
 .header__wrapper .main-nav__list {
-  padding-top: 20px;
-  gap: 10px 2.9%;
+  max-width: 591px;
+  padding: 20px 0 0 2px;
+  gap: 10px 3.3%;
 
   @include vp-1199 {
     padding: 0;
+    max-width: none;
   }
 }
 
@@ -124,6 +137,10 @@
 
   &:focus:not(:disabled) {
     outline: 1px solid $color-default-white;
+  }
+
+  &:focus:not(:disabled)::after {
+    display: none;
   }
 
   &:active:not(:disabled) {
@@ -160,7 +177,7 @@
   }
 }
 
-.header__wrapper.main-nav.is-open svg {
+.header__wrapper.is-open .main-nav__toggle svg {
   @include vp-1199 {
     display: none;
   }
@@ -170,7 +187,7 @@
   @include vp-1199 {
     content: "";
     position: absolute;
-    width: 22px;
+    width: 24px;
     height: 2px;
     background-color: $elephant;
     transform: rotate(135deg);
@@ -186,7 +203,7 @@
   @include vp-1199 {
     content: "";
     position: absolute;
-    width: 22px;
+    width: 24px;
     height: 2px;
     background-color: $elephant;
     transform: rotate(45deg);
@@ -203,20 +220,20 @@
 
   @include vp-1199 {
     grid-template-columns: repeat(3, 33.33%);
-    gap: 50px 0;
+    gap: 43px 0;
     padding: 30px 45px 70px;
   }
 
   @include vp-767 {
     grid-template-columns: repeat(2, 50%);
     padding: 15px 15px 50px;
-    gap: 10px 0;
+    gap: 3px 0;
   }
 }
 
 .header__wrapper.main-nav.is-open {
   @include vp-1199 {
-    z-index: 11;
+    z-index: 15;
   }
 }
 
@@ -269,6 +286,39 @@
   @include vp-767 {
     transform: translate(-4px, 0);
     margin-top: 35px;
+  }
+}
+
+.header__wrapper.main-nav.is-open .site-list__link,
+.header__wrapper.main-nav.no-js .site-list__link {
+  &:hover:not(:disabled)::after {
+    position: absolute;
+    content: "";
+    height: 1px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: $elephant;
+  }
+
+  &:focus:not(:disabled) {
+    outline: 1px solid $elephant;
+  }
+
+  &:focus:not(:disabled)::after {
+    display: none;
+  }
+
+  &:active:not(:disabled) {
+    outline: none;
+  }
+
+  &:active:not(:disabled)::after {
+    display: none;
+  }
+
+  &:disabled:not(:focus) {
+    opacity: 0.5;
   }
 }
 
