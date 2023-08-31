@@ -20,7 +20,6 @@ const initReviewsSwiper = () => new Swiper('.reviews__swiper', {
     },
 
     320: {
-      autoHeight: true,
       slidesPerView: 1,
       spaceBetween: 0,
     },

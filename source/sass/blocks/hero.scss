@@ -135,10 +135,6 @@
   width: 220px;
   margin-bottom: 150px;
 
-  &:focus .swiper-slide {
-    display: none;
-  }
-
   @include vp-1199 {
     margin: 0 auto 50px;
     width: 206px;

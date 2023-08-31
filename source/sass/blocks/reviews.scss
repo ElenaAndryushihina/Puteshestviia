@@ -42,6 +42,11 @@
 
 .reviews__swiper .swiper-wrapper {
   padding: 10px;
+  height: auto;
+
+  @include vp-767 {
+    height: 100%;
+  }
 }
 
 .reviews__swiper .swiper-slide {
@@ -64,6 +69,7 @@
   }
 
   @include vp-767 {
+    height: auto;
     padding: 19px 19.5px 19px 19.5px;
     margin: 10px 0;
     width: 94%;
