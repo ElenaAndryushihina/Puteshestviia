@@ -10,16 +10,19 @@ const initReviewsSwiper = () => new Swiper('.reviews__swiper', {
   breakpoints: {
 
     1200: {
-      slidesPerView: 1.66,
-      spaceBetween: 30,
+      autoHeight: false,
+      slidesPerView: 1.63,
+      spaceBetween: 27,
     },
 
     768: {
-      slidesPerView: 1.29,
+      autoHeight: false,
+      slidesPerView: 1.26,
       spaceBetween: 30,
     },
 
     320: {
+      autoHeight: true,
       slidesPerView: 1,
       spaceBetween: 0,
     },

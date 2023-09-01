@@ -12,17 +12,17 @@
 
 .advantages__wrapper {
   position: relative;
-  margin-top: 2px;
-  padding: 12px 0 85px 0;
+  margin-top: 6px;
+  padding: 7px 0 85px 0;
 
   @include vp-1199 {
     margin: 0 auto;
-    padding: 15px 0 85px 0;
+    padding: 16px 0 85px 0;
     width: 678px;
   }
 
   @include vp-767 {
-    padding: 25px 0 61px 0;
+    padding: 53px 0 61px 0;
     width: 100%;
   }
 }
@@ -51,7 +51,7 @@
   }
 
   @include vp-767 {
-    top: 20px;
+    top: 47px;
   }
 }
 

@@ -4642,7 +4642,7 @@ button,
 }
 @media (max-width: 1199px) {
   .about-us {
-    padding: 66px 0 14px;
+    padding: 66px 0 0;
   }
 }
 @media (max-width: 767px) {
@@ -4692,12 +4692,12 @@ button,
 @media (max-width: 1199px) {
   .about-us__wrapper {
     min-height: 461px;
-    padding: 0 45px 70px 399px;
+    padding: 0 45px 60px 399px;
   }
 }
 @media (max-width: 767px) {
   .about-us__wrapper {
-    padding: 56px 15px 30px;
+    padding: 56px 15px 19px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -4773,6 +4773,10 @@ button,
   }
 }
 
+.reviews {
+  overflow: hidden;
+}
+
 .reviews__wrapper {
   position: relative;
   padding: 0 0 113px 110px;
@@ -4795,12 +4799,12 @@ button,
 }
 @media (max-width: 1199px) {
   .reviews__wrapper h3 {
-    margin: 0 0 18px 0;
+    margin: 24px 0 18px 0;
   }
 }
 @media (max-width: 767px) {
   .reviews__wrapper h3 {
-    margin: -1px 0 12px 0;
+    margin: 10px 0 23px 0;
   }
 }
 
@@ -4821,13 +4825,12 @@ button,
   }
 }
 
-.reviews__swiper .swiper-wrapper {
+.reviews__swiper {
   padding: 10px;
-  height: auto;
 }
 @media (max-width: 767px) {
-  .reviews__swiper .swiper-wrapper {
-    height: 100%;
+  .reviews__swiper {
+    padding: 10px 0;
   }
 }
 
@@ -4843,9 +4846,9 @@ button,
   padding: 19px 40px 19px 20px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 35.4% auto;
-  grid-template-columns: 35.4% auto;
-  gap: 4.2%;
+  -ms-grid-columns: 35.2% auto;
+  grid-template-columns: 35.2% auto;
+  gap: 4%;
 }
 @media (max-width: 1199px) {
   .reviews__card {
@@ -4858,9 +4861,8 @@ button,
 @media (max-width: 767px) {
   .reviews__card {
     height: auto;
-    padding: 19px 19.5px 19px 19.5px;
-    margin: 10px 0;
-    width: 94%;
+    padding: 19px 19px 19px 19px;
+    margin: 0 10px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -4874,7 +4876,8 @@ button,
 
 @media (max-width: 767px) {
   .reviews__img {
-    margin-bottom: 18px;
+    width: 99%;
+    margin: 0 auto 20px;
   }
 }
 
@@ -5022,19 +5025,19 @@ button,
 
 .advantages__wrapper {
   position: relative;
-  margin-top: 2px;
-  padding: 12px 0 85px 0;
+  margin-top: 6px;
+  padding: 7px 0 85px 0;
 }
 @media (max-width: 1199px) {
   .advantages__wrapper {
     margin: 0 auto;
-    padding: 15px 0 85px 0;
+    padding: 16px 0 85px 0;
     width: 678px;
   }
 }
 @media (max-width: 767px) {
   .advantages__wrapper {
-    padding: 25px 0 61px 0;
+    padding: 53px 0 61px 0;
     width: 100%;
   }
 }
@@ -5066,7 +5069,7 @@ button,
 }
 @media (max-width: 767px) {
   .advantages__wrapper b {
-    top: 20px;
+    top: 47px;
   }
 }
 
