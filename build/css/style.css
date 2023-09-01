@@ -4316,7 +4316,7 @@ button,
   .training__process {
     width: 100%;
     padding: 0 5px;
-    margin-top: 19px;
+    margin-top: 47px;
   }
 }
 
@@ -5037,7 +5037,7 @@ button,
 }
 @media (max-width: 767px) {
   .advantages__wrapper {
-    padding: 53px 0 61px 0;
+    padding: 52px 0 61px 0;
     width: 100%;
   }
 }

@@ -10,16 +10,19 @@ const initTrainingSwiper = () => new Swiper('.training__swiper', {
   breakpoints: {
 
     1200: {
+      autoHeight: false,
       slidesPerView: 4,
       spaceBetween: 10,
     },
 
     768: {
+      autoHeight: false,
       slidesPerView: 3,
       spaceBetween: 10,
     },
 
     320: {
+      autoHeight: true,
       slidesPerView: 1,
       spaceBetween: 0,
     },
